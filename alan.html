@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- Use a modern, clean font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        :root {
+            --primary-blue: #007BFF;
+            --dark-blue: #0056b3;
+            --accent-yellow: #FFC107;
+            --white: #FFFFFF;
+            --light-gray: #f8f9fa;
+            --text-color: #333;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            background-color: var(--white);
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header and Navigation */
+        header {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: 700;
+            transition: color 0.3s ease;
+        }
+
+        header .logo a:hover {
+            color: var(--accent-yellow);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            color: var(--accent-yellow);
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--light-gray);
+            color: var(--dark-blue);
+            text-align: center;
+            padding: 10rem 20px 6rem;
+            border-radius: 12px;
+            margin-top: 64px; /* Space for fixed header */
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+
+        section:nth-child(even) {
+            background-color: var(--light-gray);
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary-blue);
+        }
+        
+        .section-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--dark-blue);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: var(--accent-yellow);
+            color: var(--dark-blue);
+        }
+
+        .btn-secondary:hover {
+            background-color: #e6a800; /* A darker yellow on hover */
+            color: var(--white);
+        }
+
+        /* Lists */
+        ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        ul.list-style-none {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        ul.list-style-none li {
+            padding: 15px;
+            background-color: var(--white);
+            border-left: 5px solid var(--primary-blue);
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease;
+        }
+
+        ul.list-style-none li:hover {
+            transform: translateX(5px);
+        }
+
+        /* Contact Form */
+        #contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        #contact-form input,
+        #contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        #contact-form button {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            border: none;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        #contact-form button:hover {
+            background-color: var(--dark-blue);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-blue);
+            color: var(--white);
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav ul {
+                margin-top: 1rem;
+                justify-content: center;
+            }
+            nav ul li {
+                margin: 0 10px;
+            }
+            .hero {
+                padding: 8rem 20px 4rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header and Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="#hero">Alando</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <h1>Hi! I’m Alando George Omondi</h1>
+            <p>a passionate web developer with a love for creating functional and beautiful web experiences and also a certified trainer of ICT.</p>
+            <a href="#" class="btn btn-secondary">Download My CV</a>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="section-content">
+                    <p>Hi! I’m Mr Alando George, a passionate web developer with a love for creating functional and beautiful web experiences. I am dedicated to building intuitive and efficient web applications that solve real-world problems. My skills include front-end development with HTML, CSS, and JavaScript, as well as a growing interest in modern frameworks and backend technologies.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Educational Background Section -->
+        <section id="education">
+            <div class="container">
+                <h2>Educational Background</h2>
+                <div class="section-content">
+                    <p>I hold a diploma in Information Technology from Jomo Kenyatta University of Agriculture and Technology.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interests Section -->
+        <section id="interests">
+            <div class="container">
+                <h2>Interests</h2>
+                <div class="section-content">
+                    <ul class="list-style-none">
+                        <li>
+                            <strong>Web Development:</strong> Exploring modern frameworks and best practices.
+                        </li>
+                        <li>
+                            <strong>Tech Innovations:</strong> Keeping up with emerging trends in technology.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="section-content">
+                    <ul class="list-style-none">
+                        <li>
+                            <strong>Project 1:</strong> A portfolio of my journey to web development
+                        </li>
+                        <li>
+                            <strong>Project 2:</strong> My goals and some of my achievements in portfio 1
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Me Section -->
+        <section id="contact">
+            <div class="container">
+                <h2>Contact Me</h2>
+                <div class="section-content">
+                    <p>Feel free to reach out! You can use the form below to get in touch with me directly.</p>
+                    <form id="contact-form">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Alando. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Smooth Scrolling -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Optional: Contact form submission handler (does not send data)
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Form submitted! (This is a demo, no data was sent.)');
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>
