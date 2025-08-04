@@ -1,25 +1,33 @@
-MY PORTFOLIO
+# Hi there, I’m Alando-glitch 👋
 
-This is a personal profile portfolio website designed with html, css and javascript composed of the following sections
+Welcome to my GitHub!  
+I'm a passionate Software Engineering student at PLP and an ICT Technical Trainer at KSTVET. Whether I'm building cool web experiences or helping others level up their tech skills, I love making things work and sharing what I know.
 
-About Me
+## 👨‍💻 What I Do
+- **Software Engineering Student** @ PLP
+- **ICT Technical Trainer** @ KSTVET
 
-A brief description of myself and experiences
+## 💻 Tech Stack & Skills
+- Web Development: HTML, CSS, JavaScript
+- Always exploring and learning new tech!
 
-Educational Background
+## 🚀 Featured Project
+- [My Portfolio Site](https://github.com/Alando-glitch/my-portfolio.git)  
+  A showcase of my projects, skills, and a bit about me. Check it out!
 
-Information about my education and the supportive document that can be downloaded especially the CV	
+## 🎓 Certifications & Education
+- Diploma in Information Technology — Jomo Kenyatta University of Agriculture and Technology
+- Certificate in Universal Design for Learning (UDL) — Commonwealth of Learning
+- Certificate in Quality Assurance — Commonwealth of Learning
 
-Interests
+## 🎵 More About Me
+- 📸 Love photography — capturing moments is my thing!
+- 📚 Avid reader — always up for a good book.
+- 🎶 Music enthusiast — playlists for every mood.
 
-•	This section explores what I like doing most 
+## 📬 Let’s Connect!
+- **Email:** grgalando@mail.com
+- **GitHub:** [Alando-glitch](https://github.com/Alando-glitch)
 
- Projects
- 
-This section indicates the number and type of projects I’m working on
-
-Contact Me
-
-How to find me in terms of questions, concern and assistance or even tasks
-
-
+Thanks for stopping by! Feel free to check out my projects, connect, or just say hi.  
+Happy coding! 🚀
