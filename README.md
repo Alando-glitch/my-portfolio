@@ -13,8 +13,8 @@ Interests
 
  Projects
 This section indicates the number and type of projects I’m working on
-Contact Me
 
+Contact Me
 How to find me in terms of questions, concern and assistance or even tasks
 
 
